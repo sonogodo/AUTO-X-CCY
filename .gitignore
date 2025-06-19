@@ -1,0 +1,10 @@
+# Arquivos de segredos e de estado
+keys.py
+last_seen_ids.json
+
+# Pasta de ambiente virtual do Python
+.venv/
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
