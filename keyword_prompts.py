@@ -10,7 +10,11 @@
 TARGET_USER_IDS = [
     "1473123053047529472",  # ID do perfil "pedrorouseff"
     "174518646",            # ID do perfil do @SomenteOrestes
-    "31139434"               # ID do perfil do @gleisi
+    "31139434",               # ID do perfil do @gleisi
+    "54341363",               # ID do perfil do @JornalOGlobo
+    "8802752"               # ID do perfil do @Jg1
+
+    
     # Adicione mais IDs aqui
 ]
 
