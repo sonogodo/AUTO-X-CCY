@@ -1,22 +1,56 @@
 # keyword_prompts.py
-# VERSÃO ATUALIZADA PARA MONITORAR MÚLTIPLOS ALVOS
+# VERSÃO ATUALIZADA COM MAPEAMENTO DE ID PARA USERNAME
 
 # =================================================================================
 # 1. DEFINIÇÃO DOS USUÁRIOS-ALVO
 # =================================================================================
-# Agora usamos uma LISTA de IDs para monitorar várias contas ao mesmo tempo.
-# Basta adicionar quantos IDs você quiser, entre aspas e separados por vírgula.
-
+# A lista de IDs que o bot deve monitorar.
 TARGET_USER_IDS = [
-    "1473123053047529472",  # ID do perfil "pedrorouseff"
-    "174518646",            # ID do perfil do @SomenteOrestes
-    "31139434",               # ID do perfil do @gleisi
-    "54341363",               # ID do perfil do @JornalOGlobo
-    "8802752"               # ID do perfil do @Jg1
-
-    
-    # Adicione mais IDs aqui
+    "1473123053047529472",  # @pedrorouseff
+    "174518646",            # @SomenteOrestes
+    "31139434",             # @gleisi
+    "54341363",             # @JornalOGlobo
+    "8802752",              # @Jg1
+    "1875980871746179072",  # @analise2025
+    "206222507",            # @zehdeabreu
+    "248890506",            # @brasil247
+    "63118359",             # @mariadorosario
+    "22864100",             # @pimenta13br
+    "1563897907446747136",  # @_Janoninho
+    "4550317786",           # @DilmaResiste
+    "131574396",            # @dilmabr
+    "1652708826980794369",  # @solangealvvs
+    "1004511711251099653",  # @DudaSalabert
+    "1802012191270338561",  # @Mandsfra25
+    "888811861814247424",   # @CatarinaAguiar1
+    "14594813",             # @folha
+    "16794066"              # @blogdonoblat
 ]
+
+# NOVO DICIONÁRIO: Mapa de ID para @Username para logs mais legíveis
+USER_ID_TO_NAME_MAP = {
+    "1473123053047529472": "@pedrorouseff",
+    "174518646": "@SomenteOrestes",
+    "31139434": "@gleisi",
+    "54341363": "@JornalOGlobo",
+    "8802752": "@Jg1",
+    "1875980871746179072": "@analise2025",
+    "206222507": "@zehdeabreu",
+    "248890506": "@brasil247",
+    "63118359": "@mariadorosario",
+    "22864100": "@pimenta13br",
+    "1563897907446747136": "@_Janoninho",
+    "4550317786": "@DilmaResiste",
+    "131574396": "@dilmabr",
+    "1652708826980794369": "@solangealvvs",
+    "1004511711251099653": "@DudaSalabert",
+    "1802012191270338561": "@Mandsfra25",
+    "888811861814247424": "@CatarinaAguiar1",
+    "14594813": "@folha",
+    "16794066": "@blogdonoblat"
+}
+
+
 
 
 # =================================================================================
@@ -39,6 +73,13 @@ prompts_com_aliases = {
                   "Seu objetivo é questionar a validade da notícia. "
                   "Se for algo positivo sobre o governo, encontre um contraponto com dados ou fatos que mostrem uma perspectiva negativa ou um problema relacionado. "
                   "Mantenha um tom zombador. Use no máximo 180 caracteres."
+    },
+
+    # --- TEMA Nikolas ---
+    ("Nikolas", "Nikolas Ferreira"): {
+        "prompt": "Aja como um comentarista cético e com um humor ácido. Seu objetivo é questionar a veracidade da informação no tweet: '{tweet_text}'. "
+                  "Se o tweet parecer sensacionalista ou não citar fontes, questione a falta delas de forma irônica. "
+                  "Seu tom deve ser zombador. Máximo de 180 caracteres."
     },
     
     # ... (o resto dos seus prompts continua aqui sem alteração) ...

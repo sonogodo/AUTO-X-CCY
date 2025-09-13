@@ -1,10 +1,90 @@
-# Arquivos de segredos e de estado
+# API Keys and Sensitive Configuration
 keys.py
+config.py
+*.key
+*.secret
+
+# Bot State and Data Files
+*.json
+*.log
+*.txt
 last_seen_ids.json
+bot_stats.json
+processed_tweets.json
+processed_mentions.json
+negative_targets.json
+sentiment_config.json
+target_suggestions.json
+model_usage_stats.json
+rate_limiter_state.json
+bot_optimized_state.json
+post_reset_bot_state.json
+ultra_conservative_config.json
+conservative_bot_config.json
+mention_bot_config.json
+mention_prompt_config.json
+simple_bot_ids.json
+rate_limit_usage.json
+analyzed_replies.json
+last_own_tweet_id.json
+last_mention_id.json
 
-# Pasta de ambiente virtual do Python
-.venv/
+# Backup Files
+*.backup_*
+*_backup_*
 
-# Arquivos de cache do Python
+# Test and Debug Files
+diagnostic_report_*.txt
+rate_limit_test_results_*.json
+partial_results_*.json
+targets_export_*.txt
+bot_data_export.json
+
+# Python Cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Images and Charts
+*.png
+*.jpg
+*.jpeg
+*.gif
+rate_limit_analysis_*.png

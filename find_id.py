@@ -3,7 +3,7 @@ import tweepy
 from keys import X_BEARER_TOKEN
 
 # Peça o nome de usuário no terminal
-username_to_find = input("pedrorousseff")
+username_to_find = input("")
 
 # Verifique se o usuário digitou algo
 if not username_to_find:
